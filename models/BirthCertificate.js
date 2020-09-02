@@ -26,14 +26,38 @@ const BirthSchema = new Schema(
     },
     gender: {
         type: String,
-        enum: ["user", "admin", "superadmin"],
+        enum: ["female", "male"],
         required: true
       },
       father:{
-        firstName,lastName,birthPlace,nationalId,address 
+        firstName:{
+          type: String
+        },
+        lastName:{
+          type: String
+        },
+        birthPlace:{
+          type: String
+        },nationalId: {
+          type: String
+        },address: {
+          type: String
+        } 
       },
       mother:{
-        firstName,lastName,birthPlace,nationalId,address 
+        firstName:{
+          type: String
+        },
+        lastName:{
+          type: String
+        },
+        birthPlace:{
+          type: String
+        },nationalId: {
+          type: String
+        },address: {
+          type: String
+        } 
       },
       birthEntryNo:{
         type: String
@@ -49,8 +73,7 @@ const BirthSchema = new Schema(
       },
       country:{
         type: String
-      },
-
+      }
      }, 
      { timestamps: true }
 );
