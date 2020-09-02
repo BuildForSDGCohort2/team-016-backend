@@ -10,11 +10,11 @@ An international Birth Registration Application
 
 ## Long description
 
-A progressive web application developed to notify and to register any birth anywhere and everywhere regardless the health environment. The application delivers a printable birth certificate and generates various reports.
+A progressive web application developed to notify and to register any birth anywhere and everywhere regardless of the health environment. The application delivers a printable birth certificate and generates various reports like kids born with disability.
 
 ## Project motivation
 
-According to the Multiple Indicator Cluster Surveys, MICS report for 2014, birth registration in Cameroon was only 66.1 per cent. Being aware that this situation is not the worst in Africa and abroad, knowing that some progresses have been done since then, but not really good enough to make remarkable progress, many factors such as infrastructure, lack of adequate national policies, distant countryside&#39;s areas etc. still a big barrier to record all births. Therefore, we are convinced that the development and the implementation of this BirthApp will be a huge boost to many stakeholders&#39; efforts to solve the problem of unrecorded people.
+To protect children against human right violation a birth certificate is necessary to prove age of a child for instance child labour or early marriages can only be proved if a child has a birth certificate.According to the Multiple Indicator Cluster Surveys, MICS report for 2014, birth registration in Cameroon was only 66.1 per cent. Being aware that this situation is not the worst in Africa and abroad, knowing that some progresses have been done since then, but not really good enough to make remarkable progress, many factors such as infrastructure, lack of adequate national policies, distant countryside&#39;s areas etc. still a big barrier to record all births. Therefore, we are convinced that the development and the implementation of this BirthApp will be a huge boost to many stakeholders&#39; efforts to solve the problem of unrecorded people.In Ghana 2015, a pilot  project was launched that was supported by UNICEF and Tilco ,a process that would take about 6 months to be entered in the database was taking a few minutes.To protect children against human right violation a birth certificate is necessary to prove age of a child for instance child labour or early marriages can only be proved if a child has a birth certificate.
 
 ## Project category
 
