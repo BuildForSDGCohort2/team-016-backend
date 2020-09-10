@@ -1,5 +1,20 @@
-# team-016-backend
+# StoryBooks
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f10d4c8d7e5143eda997ef95ad44f687)](https://app.codacy.com/gh/BuildForSDGCohort2/team-016-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/team-016-backend&utm_campaign=Badge_Grade_Settings)
+> Create public and private stories from your life
 
-The backend repository for BirthApp, Team-016-group-a, BuildForSDGCohort2
+This app uses Node.js/Express/MongoDB with Google OAuth for authentication
+
+## Usage
+
+Add your mongoDB URI and Google OAuth credentials to the config.env file
+
+```
+# Install dependencies
+npm install
+
+# Run in development
+npm run dev
+
+# Run in production
+npm start
+```

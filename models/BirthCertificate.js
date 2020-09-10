@@ -1,14 +1,12 @@
 const { Schema, model } = require("mongoose");
+const mongoose= require('mongoose');
+const {ObjectId}= mongoose.Schema;
 
 const BirthSchema = new Schema(
   {
-
-
-   birthNumber: {
-      type: String,
-      required: true
-    },
-    fisrtName: {
+    
+  
+    firstName: {
       type: String,
       required: true
     },
@@ -24,35 +22,29 @@ const BirthSchema = new Schema(
       type: Date,
       required: true
     },
-    gender: {
-        type: String,
-        enum: ["user", "admin", "superadmin"],
-        required: true
-      },
-      father:{
-        firstName,lastName,birthPlace,nationalId,address 
-      },
-      mother:{
-        firstName,lastName,birthPlace,nationalId,address 
-      },
-      birthEntryNo:{
-        type: String
-      },
-      dateOfRegistration:{
-
-      },
-      nameOfOfficer:{
-        type: String
-      },
-      anomaly:{
-        type: String
-      },
-      country:{
-        type: String
-      },
-
+    category:{
+      type:ObjectId,
+      ref:'Category',
+      required:true
+  },
+  birthEntryNo:{
+    type: String
+  },
+ 
+ 
+  anomaly:{
+    type: String
+  },
+  country:{
+    type: String
+  }/* ,
+  photo:{
+    data:Buffer,
+    contentType:String
+}, */
+      
      }, 
      { timestamps: true }
 );
 
-module.exports = model("birthCertificate", BirthSchema);
+module.exports = model("BirthCertificate", BirthSchema);
