@@ -76,17 +76,8 @@ exports.isAuth=(req,res,next)=>{
      next();
 }
 
-exports.isAgent=(req,res,next)=>{
-    if(req.profile.role <2){
-        return res.status(403).json({
-                 error:"Not an Authorized Agent"
-        });
-    }
-    next();
-}
-
 exports.isAdmin=(req,res,next)=>{
-    if(req.profile.role !=3){
+    if(req.profile.role === 0){
         return res.status(403).json({
                  error:"Insufficient privillegdes !You are not Admin"
         });

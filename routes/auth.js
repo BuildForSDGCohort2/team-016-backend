@@ -9,8 +9,6 @@ router.post('/signup',validatorArray,userSignUpValidator,signUp);
 router.post('/signin',signIn);
 router.get('/signout',signOut);
 
-/*router.get("/test",requireSignin,(req,res)=>{
-  res.send("Hello there!")
-})*/
+
 
   module.exports=router;
