@@ -63,58 +63,7 @@ birth.save((err,data)=>{
         
 });
 }
-/* exports.create = (req,res)=>{
-    const imageSize=1000000;
-    const limit =imageSize/1000000;
 
- let form =new formidable.IncomingForm();
- form.keepExtensions=true;
-
- form.parse(req,(err,fields)=>{
-     if(err){
-         return res.status(400).json({
-             error:'Image could not be uploaded'
-         })
-     }
-    //check all fields
-const {fisrtName,lastName,birthPlace}=fields;
-
- if(!fisrtName || !lastName || !birthPlace ){
-    return res.status(400).json({
-        error:`All fields are required !`
-    })
- }
-    
- let certificate= new BirthCertificate(fields)
-     if(files.photo){
-        // console.log("Files Photo: ",files.photo)
-        if(files.photo.size>imageSize){
-            return res.status(400).json({
-                error:`Image should be less than ${limit}MB!`
-            })
-        }
-
-         certificate.photo.data=fs.readFileSync(files.photo.path);
-         certificate.photo.contentType=files.photo.type
-     }
-
-      certificate.save((err,result)=>{
-            if(err){
-                return res.status(400).json({
-                    error:errorHandler(err)
-                });
-            }
-
-            res.json(result);
-      });  
-
- });
-
-
-}; */
-
-
-//create the certificate from form and add to db
  
 exports.updateCertificate = (req,res)=>{
     const imageSize=1000000;
@@ -140,17 +89,6 @@ exports.updateCertificate = (req,res)=>{
     
  let certificate= req.certificate;
  certificate=_.extend(certificate,fields)
-    /* if(files.photo){
-        // console.log("Files Photo: ",files.photo)
-        if(files.photo.size>imageSize){
-            return res.status(400).json({
-                error:`Image should be less than ${limit}MB!`
-            })
-        }
-
-         certificate.photo.data=fs.readFileSync(files.photo.path);
-         certificate.photo.contentType=files.photo.type
-     }*/
 
       certificate.save((err,result)=>{
             if(err){
@@ -168,6 +106,8 @@ exports.updateCertificate = (req,res)=>{
 };
 
 //retrieve all certificates
+
+
 exports.list=(req,res)=>{
     let order=req.query.order?req.query.order:'asc';
     let sortBy=req.query.sortBy?req.query.sortBy:'_id';

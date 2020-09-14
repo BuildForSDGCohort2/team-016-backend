@@ -5,8 +5,7 @@ const {ObjectId}= mongoose.Schema;
 const BirthSchema = new Schema(
   {
     
-  
-    firstName: {
+    fisrtName: {
       type: String,
       required: true
     },
@@ -14,34 +13,53 @@ const BirthSchema = new Schema(
       type: String,
      
     },
-    birthPlace: {
-      type: String,
+    bornInHospital: {
+      type: Boolean,
       required: true
     },
     dob: {
       type: Date,
       required: true
     },
-    category:{
-      type:ObjectId,
-      ref:'Category',
-      required:true
+    gender: {
+        type: String,
+        required: true
+      },
+      fatherName:{
+        type: String,
+        required: true
+      },
+      motherName:{
+        type: String,
+        required: true
+      },
+      height:{
+        type:Number,
+        required: true
+    },
+    weight:{
+      type:Number,
+      required: true
   },
-  birthEntryNo:{
-    type: String
-  },
- 
- 
-  anomaly:{
-    type: String
-  },
-  country:{
-    type: String
-  }/* ,
-  photo:{
-    data:Buffer,
-    contentType:String
-}, */
+     
+      anomalies:{
+        type: String
+      },
+      comments:{
+        type: String
+      },
+      country:{
+        type: String
+      },
+      province:{
+        type: String
+      },
+      district:{
+        type: String
+      },
+       village:{
+        type: String
+      }
       
      }, 
      { timestamps: true }

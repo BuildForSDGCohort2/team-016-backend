@@ -4,7 +4,13 @@ const {v4:uuidv4} =require('uuid');
 
 
 const userSchema=new mongoose.Schema({
-    name:{
+    firstName:{
+        type:String,
+        trim:true,
+        required:true,
+        maxlength:32
+    },
+    lastName:{
         type:String,
         trim:true,
         required:true,
@@ -20,19 +26,28 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    about:{
+    phonenumber:{
         type:String,
       trim:true
     },
     salt:String,
-    role:{
-        type:Number,
-        default:0
+    country:{
+        type:String,
+      trim:true
     },
-    history:{
-        type:Array,
-        default:[]
+    province:{
+        type:String,
+        trim:true   
+    },
+    district:{
+        type:String,
+        trim:true   
+    },
+    village:{
+        type:String,
+        trim:true   
     }
+
 
 },{timestamps:true});
 

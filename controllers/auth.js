@@ -63,7 +63,6 @@ exports.signOut=(req,res)=>{
 exports.requireSignin=expressJwt({
     secret:process.env.JWT_SECRET,
     algorithms: ['HS256'],
-    //algorithms:['RS256'],
     userProperty:"auth"
 }); 
 
@@ -78,7 +77,7 @@ exports.isAuth=(req,res,next)=>{
 }
 
 exports.isAgent=(req,res,next)=>{
-    if(req.profile.role !=2){
+    if(req.profile.role <2){
         return res.status(403).json({
                  error:"Not an Authorized Agent"
         });
