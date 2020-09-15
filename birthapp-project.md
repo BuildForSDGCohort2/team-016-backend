@@ -236,16 +236,16 @@ BuildForSDGCohort2 Team-016-group-a
 
 ## Tasks
 
-| Task | Responsible | Deadline |
-| ------ | ------ | ------ |
-| 1. Discussion summary | Robert Makuta | 30.08.2020 |
-| 2. UML design | Talent Jokonya | 05.09.2020 |
-| 3. Frontend screens design | Selma Ndi &amp; Tinos Anogo | 05.09.2020 |
-| 4. Backend screens design | Talent Jokonya &amp; Robert Makuta | 05.09.2020 |
-| 5. Github project management setup | Robert Makuta | 01.09.2020 |
-| 6. Heroku setup | Robert Makuta | 03.09.2020 |
-| 7. Frontend coding | Selma Ndi &amp; Tinos Anogo | 25.09.2020 |
-| 8. Backend coding | Talent Jokonya &amp; Robert Makuta | 25.09.2020 |
+| Task  | Responsible | Deadline  | 
+| ------  | ------  | ------  | 
+| 1. Discussion summary | Robert Makuta | 30.08.2020  | 
+| 2. UML design | Talent Jokonya  | 05.09.2020  | 
+| 3. Frontend screens design  | Selma Ndi &amp; Tinos Anogo | 05.09.2020  | 
+| 4. Backend screens design | Talent Jokonya &amp; Robert Makuta  | 05.09.2020  | 
+| 5. Github project management setup  | Robert Makuta | 01.09.2020  | 
+| 6. Heroku setup | Robert Makuta | 03.09.2020  | 
+| 7. Frontend coding  | Selma Ndi &amp; Tinos Anago | 25.09.2020  | 
+| 8. Backend coding | Talent Jokonya &amp; Robert Makuta  | 25.09.2020  | 
 
 ## Expectations
 
