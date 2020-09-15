@@ -1,7 +1,7 @@
-const User= require('../models/user');
-const {errorHandler} =require('../helpers/dbErrorHandler');
-const jwt =require('jsonwebtoken');//to generate a signed token 
-const expressJwt =require('express-jwt');//to check authorization
+const User= require("../models/user");
+const {errorHandler} =require("../helpers/dbErrorHandler");
+const jwt =require("jsonwebtoken");//to generate a signed token 
+const expressJwt =require("express-jwt");//to check authorization
 
 
 
@@ -45,8 +45,8 @@ User.findOne({email},(err,user)=>{
 
     //generate a signed token with user id and secret 
     const token=jwt.sign({_id:user._id},process.env.JWT_SECRET)
-    //persist the token as 't' in cookie with expiry date
-    res.cookie('t',token,{expiry :new Date() + 9999});
+    //persist the token as "t" in cookie with expiry date
+    res.cookie("t",token,{expiry :new Date() + 9999});
     //return the response user and token to frontend client
 
     const {_id,name,email,role}=user;
@@ -62,7 +62,7 @@ exports.signOut=(req,res)=>{
 
 exports.requireSignin=expressJwt({
     secret:process.env.JWT_SECRET,
-    algorithms: ['HS256'],
+    algorithms: ["HS256"],
     userProperty:"auth"
 }); 
 
@@ -70,7 +70,7 @@ exports.isAuth=(req,res,next)=>{
     let user=req.profile && req.auth && req.profile._id ==req.auth._id
      if(!user){
          return res.status(403).json({
-             error:"Access Denied"
+            error :errorHandler(error)
          });
      }
      next();

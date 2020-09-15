@@ -1,12 +1,12 @@
 
-const express = require('express')
-const mongoose=require('mongoose')
-const morgan = require('morgan');
-const bodyParser=require('body-parser');
-const cookieParser=require('cookie-parser');
-const cors=require('cors')
+const express = require("express")
+const mongoose=require("mongoose")
+const morgan = require("morgan");
+const bodyParser=require("body-parser");
+const cookieParser=require("cookie-parser");
+const cors=require("cors")
 
- require('dotenv').config();
+ require("dotenv").config();
 
 
 //import routes
@@ -22,19 +22,19 @@ mongoose.connect(process.env.DATABASE,{
   useNewUrlParser:true,
   useCreateIndex:true,
   useUnifiedTopology: true
-}).then(()=>console.log('Database Connected'))
+}).then(()=>console.log("Database Connected"))
 
 //middlewares
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
 //routes middleware
 
-app.use('/api',authRoutes);
-app.use('/api',userRoutes);
-app.use('/api',certificateRoutes);
+app.use("/api",authRoutes);
+app.use("/api",userRoutes);
+app.use("/api",certificateRoutes);
 
 
 //port 

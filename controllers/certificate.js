@@ -1,8 +1,8 @@
-const formidable =require('formidable');
-const fs=require('fs');
-const _=require('lodash');
-const BirthCertificate= require('../models/BirthCertificate');
-const { errorHandler } = require('../helpers/dbErrorHandler');
+const formidable =require("formidable");
+const fs=require("fs");
+const _=require("lodash");
+const BirthCertificate= require("../models/BirthCertificate");
+const { errorHandler } = require("../helpers/dbErrorHandler");
 
 
 //certificateId Midldleware
@@ -65,63 +65,39 @@ birth.save((err,data)=>{
 }
 
  
-exports.updateCertificate = (req,res)=>{
-    const imageSize=1000000;
-    const limit =imageSize/1000000;
+exports.updateCertificate=(req,res)=>{
+    const certificate=req.certificate
+   certificate.name=req.body.firstName
+    certificate.save((err,data)=>{
+        if(err){
+            return res.status(400).json({
+                error:errorHandler(err)
+            })
+        }
 
- let form =new formidable.IncomingForm();
- form.keepExtensions=true;
-
- form.parse(req,(err,fields,files)=>{
-     if(err){
-         return res.status(400).json({
-             error:'Image could not be uploaded'
-         })
-     }
-    //check all feilds
-    const {fisrtName,lastName,birthPlace}=fields;
-
- if(!fisrtName || !lastName || !birthPlace ){
-    return res.status(400).json({
-        error:`All fields are required !`
+        res.json(data)
     })
- }
-    
- let certificate= req.certificate;
- certificate=_.extend(certificate,fields)
-
-      certificate.save((err,result)=>{
-            if(err){
-                return res.status(400).json({
-                    error:errorHandler(err)
-                });
-            }
-
-            res.json(result);
-      });  
-
- });
+}
 
 
-};
 
 //retrieve all certificates
 
 
 exports.list=(req,res)=>{
-    let order=req.query.order?req.query.order:'asc';
-    let sortBy=req.query.sortBy?req.query.sortBy:'_id';
+    let order=req.query.order?req.query.order:"asc";
+    let sortBy=req.query.sortBy?req.query.sortBy:"_id";
     let limit=req.query.limit?parseInt(req.query.limit,10):6;
 
  BirthCertificate.find()
  .select("-photo")
- .populate('category')
+ .populate("category")
  .sort([[sortBy,order]])
  .limit(limit)
  .exec((err,certificates)=>{
      if(err){
          return res.status(400).json({
-           error:'No Certificates  found'  
+           error:"No Certificates  found"  
          })
      }
 

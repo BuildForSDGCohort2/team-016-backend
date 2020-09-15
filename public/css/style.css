@@ -1,5 +1,5 @@
 p {
-  margin: 10px 0 !important;
+  margin: 10px 0 ;
 }
 
 .login-container {
@@ -9,7 +9,7 @@ p {
 }
 
 .fa-small {
-  font-size: 16px !important;
+  font-size: 16px ;
 }
 
 .btn-float {

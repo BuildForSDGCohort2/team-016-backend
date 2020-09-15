@@ -1,11 +1,11 @@
 const { Schema, model } = require("mongoose");
-const mongoose= require('mongoose');
+const mongoose= require("mongoose");
 const {ObjectId}= mongoose.Schema;
 
 const BirthSchema = new Schema(
   {
     
-    fisrtName: {
+    firstName: {
       type: String,
       required: true
     },
